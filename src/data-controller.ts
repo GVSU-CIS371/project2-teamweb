@@ -14,7 +14,9 @@ function renderProducts(prods: Product[]): void {
 }
 
 function getByCategory(category: string): void {
-    // your code
+    const categorizedProducts:Product[] = products.filter((product) => product.category == category);
+
+    renderProducts(categorizedProducts);
 }
 
 function getByRating(minRating: number): void {

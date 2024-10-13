@@ -42,24 +42,20 @@
         // - "Best Seller" should display all products with a rating greater than 4.5.
 
 
-        electronicsLink.addEventListener('click', () => {
-          const electronicsProducts = getByCategory(products, 'Electronics');
-          renderProducts(electronicsProducts);
-        });
+        // electronicsLink.addEventListener('click', () => {
+        //   getByCategory()
+        // });
 
-        clothingLink.addEventListener('click', () => {
-          const clothingProducts = getByCategory(products, 'Clothing');
-          renderProducts(clothingProducts);
-        });
+        // clothingLink.addEventListener('click', () => {
+        //   getByCategory()
+        // });
 
-        groceriesLink.addEventListener('click', () => {
-          const groceriesProducts = getByCategory(products, 'Groceries');
-          renderProducts(groceriesProducts);
-        });
+        // groceriesLink.addEventListener('click', () => {
+        //   getByCategory()
+        // });
 
         bestSellerLink.addEventListener('click', () => {
-          const bestSellerProducts = getByRating(products, 4.5);
-          renderProducts(bestSellerProducts);
+          getByRating(4.5);
         });
       </script>
     </main>

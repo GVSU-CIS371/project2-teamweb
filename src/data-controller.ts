@@ -18,7 +18,9 @@ function getByCategory(category: string): void {
 }
 
 function getByRating(minRating: number): void {
-    // your code
+    const filteredProducts:Product[] = products.filter((product) => product.rating > minRating);
+
+    renderProducts(filteredProducts);
 }
 
 export { renderProducts, getByCategory, getByRating };

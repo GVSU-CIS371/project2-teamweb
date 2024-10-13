@@ -29,6 +29,11 @@
         import { renderProducts, getByCategory, getByRating } from './src/data-controller.ts';
         renderProducts(products);
 
+        const electronicsLink = document.getElementById('electronics');
+        const clothingLink = document.getElementById('clothing');
+        const groceriesLink = document.getElementById('grocercies');
+        const bestSellerLink = document.getElementById('bestSeller');
+
         // Bind click events using .addEventListener to the navigation links. Upon clicking:
 
         // - "Electronics" should display all products categorized as "Electronics."
@@ -36,8 +41,26 @@
         // - "Groceries" should display all products categorized as "Groceries."
         // - "Best Seller" should display all products with a rating greater than 4.5.
 
-        
-        // your code
+
+        electronicsLink.addEventListener('click', () => {
+          const electronicsProducts = getByCategory(products, 'Electronics');
+          renderProducts(electronicsProducts);
+        });
+
+        clothingLink.addEventListener('click', () => {
+          const clothingProducts = getByCategory(products, 'Clothing');
+          renderProducts(clothingProducts);
+        });
+
+        groceriesLink.addEventListener('click', () => {
+          const groceriesProducts = getByCategory(products, 'Groceries');
+          renderProducts(groceriesProducts);
+        });
+
+        bestSellerLink.addEventListener('click', () => {
+          const bestSellerProducts = getByRating(products, 4.5);
+          renderProducts(bestSellerProducts);
+        });
       </script>
     </main>
     <footer>

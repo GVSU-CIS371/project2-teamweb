@@ -10,8 +10,20 @@ function generateProductHTML(product: Product): string {
 }
 
 function renderProducts(prods: Product[]): void {
-    // your code
+    const mainContainer = document.getElementById('main-container');
+
+    if (mainContainer) {
+        // Clear existing content
+        mainContainer.innerHTML = '';
+
+        // Generate and append HTML for each product
+        prods.forEach((product) => {
+            const productHTML = generateProductHTML(product);
+            mainContainer.innerHTML += productHTML;
+        });
+    }
 }
+
 
 function getByCategory(category: string): void {
     const categorizedProducts:Product[] = products.filter((product) => product.category == category);

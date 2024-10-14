@@ -34,25 +34,18 @@
         const groceriesLink = document.getElementById('grocercies');
         const bestSellerLink = document.getElementById('bestSeller');
 
-        // Bind click events using .addEventListener to the navigation links. Upon clicking:
+           // Bind click events to navigation links
+           electronicsLink.addEventListener('click', () => {
+          getByCategory('Electronics'); // Display electronics
+        });
 
-        // - "Electronics" should display all products categorized as "Electronics."
-        // - "Clothing" should display all products categorized as "Clothing."
-        // - "Groceries" should display all products categorized as "Groceries."
-        // - "Best Seller" should display all products with a rating greater than 4.5.
+        clothingLink.addEventListener('click', () => {
+          getByCategory('Clothing'); // Display clothing
+        });
 
-
-        // electronicsLink.addEventListener('click', () => {
-        //   getByCategory()
-        // });
-
-        // clothingLink.addEventListener('click', () => {
-        //   getByCategory()
-        // });
-
-        // groceriesLink.addEventListener('click', () => {
-        //   getByCategory()
-        // });
+        groceriesLink.addEventListener('click', () => {
+          getByCategory('Groceries'); // Display groceries
+        });
 
         bestSellerLink.addEventListener('click', () => {
           getByRating(4.5);
